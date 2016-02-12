@@ -5,7 +5,7 @@ def gaussian_density(x,mu,sigma):
     return exp(-(x-mu)**2/(2*sigma**2))/(sigma*sqrt(2*pi))
 
 def next_sample(f,q,theta_k):
-    theta_prime = q(0,1)
+    theta_prime = q(theta_k,1)
 
     r = random.random()
 
