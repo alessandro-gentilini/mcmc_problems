@@ -1,2 +1,2 @@
 # mcmc_problems
-Problems from mcmc
+Problems from mcmc.
