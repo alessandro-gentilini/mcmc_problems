@@ -16,7 +16,10 @@ def mcmc(f,q,theta_k):
 
     return theta_k_plus_one
 
+thetas = [] # is this the 'chain'?!
 theta = 0
 for i in range(10**4):
     theta = mcmc(gaussian_density,random.gauss,theta)
-    print theta
+    thetas.append(theta)
+
+print thetas    
