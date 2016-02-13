@@ -1,3 +1,5 @@
+# Problem 2 from https://github.com/dfm/mcmc
+
 from math import exp, sqrt, pi
 import random
 
