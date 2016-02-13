@@ -2,7 +2,7 @@ from math import exp, sqrt, pi
 import random
 
 def gaussian_density(x,mu,sigma):
-    return exp(-(x-mu)**2/(2*sigma**2))/(sigma*sqrt(2*pi))
+    return exp(-(x-mu)**2/(2*sigma**2))/(sigma*sqrt(2*pi))+exp(-(x-5*mu)**2/(2*(sigma/3)**2))/((sigma/3)*sqrt(2*pi))
 
 def next_sample(f,q,theta_k):
     theta_prime = q(theta_k,1)
@@ -28,8 +28,9 @@ for i in range(10**5):
 import matplotlib.pyplot as plt
 import numpy as np
 
-plt.hist(thetas,normed=True)
-x=np.linspace(min(thetas),max(thetas))
+N=50
+plt.hist(thetas,normed=True,histtype='step',bins=N)
+x=np.linspace(min(thetas),max(thetas),num=N)
 
 y=[]
 for xx in x:
